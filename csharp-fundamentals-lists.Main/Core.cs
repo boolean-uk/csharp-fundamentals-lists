@@ -52,11 +52,11 @@ namespace csharp_fundamentals_lists.Main
             // The code below concatenates this.MoreIceCream to the _iceCreams list into a new results list.
             //TODO: you can 'chain' methods on the _iceCream list, so add another Concat to include EvenMoreIceCream  (this is defined below) to the result list . e.g.   _iceCreams.Concat(this.MoreIceCream).Concat(other list to concat).ToList()
 
+            // remove exception and write code here
+
             List<string> results = _iceCreams.Concat(this.MoreIceCream).ToList().Concat(EvenMoreIceCream).ToList();
             
             return results;
-
-            // remove exception and write code here
 
         }
         public List<string> Question4()

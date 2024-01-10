@@ -27,10 +27,13 @@ namespace csharp_fundamentals_lists.Main
             //TODO:  Lists in C# are a collection object that can store generic types.
             //       e.g.  the  List<string> _question1 = new List<string>() line above 
             //       declares a List<string>  which is a collection of strings.
-            //       by typing _iceCreams.  intellisense shows all of the methods associated with the _inceCreams list.
+            //       by typing _iceCreams.  intellisense shows all of the methods associated with the _iceCreams list.
             //  TODO:  1.  Find the add method and add two more flavours of ice cream: "Phish Food", "Peanut Butter Cup"
 
             //write code here
+
+            _iceCreams.Add("Phish Food");
+            _iceCreams.Add("Peanut Butter Cup");
 
             return _iceCreams;        
         }

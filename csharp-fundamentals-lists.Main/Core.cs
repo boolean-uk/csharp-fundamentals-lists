@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Authentication.ExtendedProtection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,6 +33,9 @@ namespace csharp_fundamentals_lists.Main
 
             //write code here
 
+            _iceCreams.Add("Phish Food");
+            _iceCreams.Add("Peanut Butter Cup");
+
             return _iceCreams;        
         }
 
@@ -40,8 +44,7 @@ namespace csharp_fundamentals_lists.Main
             
             //TODO:  find the lists method that returns the number of ice creams in the list and return this.
 
-            // remove exception and write code here
-            throw new NotImplementedException();
+            return _iceCreams.Count();
         }
         public List<string> Question3()
         {
@@ -51,10 +54,11 @@ namespace csharp_fundamentals_lists.Main
 
             List<string> results = _iceCreams.Concat(this.MoreIceCream).ToList();
             
-            return results;
+            //return results;
 
             // remove exception and write code here
-
+            results = _iceCreams.Concat(this.MoreIceCream).Concat(EvenMoreIceCream).ToList();
+            return results;
         }
         public List<string> Question4()
         {
@@ -65,8 +69,9 @@ namespace csharp_fundamentals_lists.Main
             //      be sure to include the MoreIceCream and EvenMoreIceCream lists
 
 
-            List<string> results = _iceCreams;
+            List<string> results =  _iceCreams.Concat(this.MoreIceCream).Concat(EvenMoreIceCream).Distinct().ToList();
             // remove exception and write code here
+
             return results;
         }
 

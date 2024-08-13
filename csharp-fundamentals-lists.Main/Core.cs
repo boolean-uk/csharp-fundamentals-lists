@@ -57,7 +57,7 @@ namespace csharp_fundamentals_lists.Main
             //TODO: you can 'chain' methods on the _iceCream list, so add another Concat to include EvenMoreIceCream  (this is defined below) to the result list . e.g.   _iceCreams.Concat(this.MoreIceCream).Concat(other list to concat).ToList()
 
             List<string> results = _iceCreams.Concat(this.MoreIceCream).ToList();
-            
+            results = _iceCreams.Concat(this.MoreIceCream).Concat(this.EvenMoreIceCream).ToList();
             return results;
 
             // remove exception and write code here
@@ -73,6 +73,7 @@ namespace csharp_fundamentals_lists.Main
 
 
             List<string> results = _iceCreams;
+            results = _iceCreams.Concat(this.MoreIceCream).Concat(this.EvenMoreIceCream).Distinct().ToList();
             // remove exception and write code here
             return results;
         }

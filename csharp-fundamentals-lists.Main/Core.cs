@@ -67,7 +67,7 @@ namespace csharp_fundamentals_lists.Main
             //      be sure to include the MoreIceCream and EvenMoreIceCream lists
 
 
-            List<string> results = _iceCreams.Concat(this.MoreIceCream).Distinct().ToList();
+            List<string> results = _iceCreams.Concat(this.MoreIceCream).Concat(EvenMoreIceCream).Distinct().ToList();
             // remove exception and write code here
             return results;
         }

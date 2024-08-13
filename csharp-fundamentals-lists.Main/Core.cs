@@ -32,6 +32,8 @@ namespace csharp_fundamentals_lists.Main
 
             //write code here
 
+            _iceCreams.Add("Phish Food");
+            _iceCreams.Add("Peanut Butter Cup");
             return _iceCreams;        
         }
 
@@ -41,7 +43,8 @@ namespace csharp_fundamentals_lists.Main
             //TODO:  find the lists method that returns the number of ice creams in the list and return this.
 
             // remove exception and write code here
-            throw new NotImplementedException();
+            int number_of_elemtents = _iceCreams.Count;
+            return number_of_elemtents;
         }
         public List<string> Question3()
         {
@@ -50,8 +53,9 @@ namespace csharp_fundamentals_lists.Main
             //TODO: you can 'chain' methods on the _iceCream list, so add another Concat to include EvenMoreIceCream  (this is defined below) to the result list . e.g.   _iceCreams.Concat(this.MoreIceCream).Concat(other list to concat).ToList()
 
             List<string> results = _iceCreams.Concat(this.MoreIceCream).ToList();
-            
-            return results;
+            List<string> results2 = _iceCreams.Concat(this.EvenMoreIceCream).ToList();
+            results.AddRange(results2);
+            return results2;
 
             // remove exception and write code here
 
@@ -64,8 +68,12 @@ namespace csharp_fundamentals_lists.Main
             //      copy the List declaration line from Question3 and add the .Distinct() into the chain.  e.g.  _iceCreams.Concat(this.MoreIceCream).Concat(other list to concat).Distinct().ToList()
             //      be sure to include the MoreIceCream and EvenMoreIceCream lists
 
-
-            List<string> results = _iceCreams;
+            List<string> results1 = _iceCreams.Concat(this.MoreIceCream).Distinct().ToList();
+            List<string> results2 = _iceCreams.Concat(this.EvenMoreIceCream).Distinct().ToList();
+            var results = new List<string>();
+            results = results1.Union(results2).ToList();
+            Console.WriteLine(results);
+            
             // remove exception and write code here
             return results;
         }

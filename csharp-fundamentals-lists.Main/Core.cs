@@ -32,16 +32,19 @@ namespace csharp_fundamentals_lists.Main
 
             //write code here
 
+            _iceCreams.Add("Phish Food");
+            _iceCreams.Add("Peanut Butter Cup");
+
             return _iceCreams;        
         }
 
         public int Question2()
         {
-            
+
             //TODO:  find the lists method that returns the number of ice creams in the list and return this.
 
             // remove exception and write code here
-            throw new NotImplementedException();
+            return _iceCreams.Count();
         }
         public List<string> Question3()
         {
@@ -50,7 +53,7 @@ namespace csharp_fundamentals_lists.Main
             //TODO: you can 'chain' methods on the _iceCream list, so add another Concat to include EvenMoreIceCream  (this is defined below) to the result list . e.g.   _iceCreams.Concat(this.MoreIceCream).Concat(other list to concat).ToList()
 
             List<string> results = _iceCreams.Concat(this.MoreIceCream).ToList();
-            
+            results = results.Concat(this.EvenMoreIceCream).ToList();
             return results;
 
             // remove exception and write code here
@@ -65,7 +68,10 @@ namespace csharp_fundamentals_lists.Main
             //      be sure to include the MoreIceCream and EvenMoreIceCream lists
 
 
-            List<string> results = _iceCreams;
+            List<string> results = _iceCreams.Concat(this.MoreIceCream).Distinct().ToList();
+            results = results.Concat(this.EvenMoreIceCream).Distinct().ToList();
+
+            
             // remove exception and write code here
             return results;
         }

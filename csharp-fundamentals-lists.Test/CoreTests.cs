@@ -22,7 +22,7 @@ namespace csharp_fundamentals_lists.Test
         [Test]
         public void Question2()
         {
-            Assert.IsTrue(_core.Question1().Count > 5);
+            Assert.IsTrue(_core.Question2() > 5);
         }
         [Test]
         public void Question3()
